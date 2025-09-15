@@ -10,10 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'system-ui', 'sans-serif'],
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
       },
       colors: {
         primary: {

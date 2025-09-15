@@ -50,9 +50,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-md"></div>
-            <span className="text-xl font-bold text-navy">LinkLift</span>
+          <div className="flex items-center space-x-3">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="group flex items-center"
+              aria-label="Home"
+            >
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 text-white text-2xl font-bold group-hover:opacity-90 transition-opacity">
+                <span className="transform -rotate-90">⏎</span>
+              </div>
+              <span className="ml-3 text-xl font-bold text-navy">LinkLift</span>
+            </button>
           </div>
 
           {/* Desktop Navigation */}

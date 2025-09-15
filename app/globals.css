@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: 'Outfit', sans-serif;
   --primary: 10, 102, 194;
   --primary-600: 11, 91, 171;
   --navy: 11, 29, 58;
@@ -13,6 +16,10 @@
   --muted: 71, 85, 105;
   --border: 226, 232, 240;
   --soft: 241, 245, 249;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,7 +103,11 @@
 }
 
 .gradient-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(var(--primary), 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(var(--primary), 0.1) 0%,
+    transparent 70%
+  );
 }
 
 .counter {

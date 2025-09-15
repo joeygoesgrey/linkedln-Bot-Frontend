@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import AnimatedDots from './animated-dots';
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -14,9 +15,14 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+      {/* Animated background dots */}
+      <div className="fixed inset-0 z-0">
+        <AnimatedDots />
+      </div>
+      
       {/* Background shapes */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-accent/10 rounded-full blur-2xl"></div>
+      <div className="absolute top-20 right-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl z-10"></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-accent/10 rounded-full blur-2xl z-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -60,11 +66,23 @@ export default function Hero() {
           {/* Right content - Sample post */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              rotate: [0, -5, 5, 0],
+              transition: { 
+                duration: 2.5,
+                delay: 0.2,
+                rotate: { 
+                  times: [0, 0.2, 0.4, 0.6],
+                  duration: 2.5,
+                  ease: "easeInOut"
+                }
+              }
+            }}
+            className="relative origin-center"
           >
-            <div className="gradient-glow absolute -inset-8 rounded-3xl"></div>
+            <div className="gradient-glow absolute -inset-8 rounded-3xl -rotate-1"></div>
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-md mx-auto">
               {/* Profile header */}
               <div className="flex items-center space-x-3 mb-4">
