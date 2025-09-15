@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import { HOW_IT_WORKS } from '@/lib/constants';
 import { Brain, Calendar, TrendingUp } from 'lucide-react';
 import { useEffect, useRef } from 'react';
@@ -57,24 +57,25 @@ export default function HowItWorks() {
     }
   }, [isInView, controls]);
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
 
-  const item = {
-    hidden: { y: 30, opacity: 0 },
+  const item: Variants = {
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
+        duration: 0.5,
+        ease: "easeOut" as const,
       },
     },
   };
@@ -136,11 +137,11 @@ export default function HowItWorks() {
                         initial={{ scaleX: 0, transformOrigin: 'left' }}
                         whileInView={{ 
                           scaleX: 1,
-                          transition: { 
-                            duration: 0.8, 
-                            delay: 0.3 + (index * 0.2),
-                            ease: [0.16, 1, 0.3, 1] 
-                          } 
+                        }}
+                        transition={{ 
+                          duration: 0.8, 
+                          delay: 0.3 + (index * 0.2),
+                          ease: "easeInOut"
                         }}
                       />
                       <motion.div 
@@ -149,11 +150,11 @@ export default function HowItWorks() {
                         whileInView={{ 
                           opacity: 1, 
                           scale: 1,
-                          transition: { 
-                            duration: 0.6, 
-                            delay: 0.8 + (index * 0.2),
-                            ease: [0.16, 1, 0.3, 1] 
-                          } 
+                        }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: 0.8 + (index * 0.2),
+                          ease: "easeInOut"
                         }}
                       />
                     </div>

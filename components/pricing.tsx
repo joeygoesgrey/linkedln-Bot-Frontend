@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { PRICING_PLANS } from '@/lib/constants';
+import { PricingPlan } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Check, Star } from 'lucide-react';
 
@@ -62,7 +63,9 @@ export default function Pricing() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {Object.entries(PRICING_PLANS).map(([key, plan], index) => (
+          {Object.entries(PRICING_PLANS).map(([key, planData], index) => {
+          const plan = planData as PricingPlan;
+          return (
             <motion.div
               key={key}
               initial={{ opacity: 0, y: 30 }}
@@ -134,7 +137,8 @@ export default function Pricing() {
                 {plan.footnote}
               </p>
             </motion.div>
-          ))}
+          );
+        })}
         </div>
 
         {/* Comparison note */}
