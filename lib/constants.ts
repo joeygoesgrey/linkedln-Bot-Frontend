@@ -7,37 +7,43 @@ export const STATS = [
 
 export const TRANSFORMATION_CARDS = [
   {
-    title: "Consistency unlocked",
-    subtitle: "Never run out of posts again.",
-    description: "Our AI understands your expertise and automatically generates fresh content ideas that align with your personal brand. No more staring at blank screens or recycling old posts."
+    title: "Voice-perfect storytelling",
+    subtitle: "Feed us your wins, CV, and past posts.",
+    description:
+      "LinkLift builds a tone model around your expertise so every headline, hook, and CTA reflects the way you actually speak to clients.",
   },
   {
-    title: "Stories that sell",
-    subtitle: "Turn your week into client-attracting stories.",
-    description: "Transform everyday experiences into compelling narratives that showcase your expertise and attract your ideal clients. Every interaction becomes content gold."
+    title: "Campaigns that run themselves",
+    subtitle: "Queue posts, mentions, and follow-up tasks in minutes.",
+    description:
+      "Batch a week of LinkedIn content, auto-tag key accounts, and let smart scheduling publish for you while you stay focused on delivery.",
   },
   {
-    title: "Authority growth",
-    subtitle: "Engage like a thought leader and attract inbound.",
-    description: "Position yourself as the go-to expert in your field. Our system helps you share insights that establish credibility and draw prospects to you naturally."
+    title: "Pipeline momentum",
+    subtitle: "Engage prospects with zero tab fatigue.",
+    description:
+      "Engage streams comment, like, and surface leads based on your rules so your profile shows up daily and conversations keep moving forward.",
   }
 ];
 
 export const HOW_IT_WORKS = [
   {
     step: "1",
-    title: "Train your voice",
-    description: "Upload past posts, your CV, or answer a 5-minute questionnaire. We learn your tone and topics."
+    title: "Plug in your assets",
+    description:
+      "Import previous LinkedIn posts, case studies, and your positioning questionnaire so LinkLift understands what makes you different.",
   },
   {
     step: "2", 
     title: "Generate & schedule",
-    description: "We draft hooks, stories, and questions—then queue them for your best times."
+    description:
+      "Spin up AI posts, hooks, and carousels, then schedule them on the calendar with mentions, images, and CTAs in one pass.",
   },
   {
     step: "3",
-    title: "Engage & grow", 
-    description: "Comment assist + weekly iteration to boost reach and leads."
+    title: "Engage & optimise", 
+    description:
+      "Activate engage streams to like, comment, and nurture prospects automatically while reporting shows what converts.",
   }
 ];
 
@@ -111,25 +117,35 @@ export const PRICING_PLANS = {
   }
 };
 
-export const FAQ_ITEMS = [
+export type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "Will posts sound like me?",
-    answer: "Yes—your voice persona is built from your CV, past posts, and tone survey."
+    question: "Will posts really sound like me?",
+    answer:
+      "Yes. We train on your CV, past posts, and tone survey so every output reflects your vocabulary, pace, and point of view.",
   },
   {
-    question: "Can I control style (funny, contrarian, motivational)?",
-    answer: "Pick per post or set a weekly mix."
+    question: "Is LinkLift compliant with LinkedIn's policies?",
+    answer:
+      "LinkLift mimics human pacing, handles overlays safely, and uses native inputs—so your account stays protected while activity scales.",
   },
   {
-    question: "What about images?",
-    answer: "We recommend the right visual type and provide prompts."
+    question: "Can I still edit posts before they go live?",
+    answer:
+      "Absolutely. Every post, hook, and comment is editable. Approve, tweak, or regenerate content before scheduling or publishing.",
   },
   {
-    question: "Is scheduling included?", 
-    answer: "Yes—queue a week in minutes."
+    question: "Does LinkLift help with engagement?", 
+    answer:
+      "Yes—set engage streams to like, comment, and mention prospects automatically while you focus on calls and delivery.",
   },
   {
-    question: "Do I keep ownership?",
-    answer: "100%. Everything we create is yours."
+    question: "Who is LinkLift for?",
+    answer:
+      "Consultants, founders, and B2B teams that need consistent LinkedIn visibility without hiring a full social team.",
   }
 ];

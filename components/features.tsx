@@ -1,52 +1,70 @@
-'use client';
+"use client";
 
-import { Clock, MessageSquare, ThumbsUp, Repeat2, Zap, CheckCircle } from 'lucide-react';
+import {
+  Brain,
+  CalendarClock,
+  MessageSquareQuote,
+  Workflow,
+  BarChart3,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Features() {
   return (
-    <section className="py-16 bg-white">
+    <section id="features" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Powerful LinkedIn Automation</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Everything you need to run LinkedIn like a revenue channel
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Automate your LinkedIn presence with our powerful tools and grow your network effortlessly.
+            LinkLift pairs AI writing with reliable automation so you can create, schedule, and engage on LinkedIn without another late-night content sprint.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
-              icon: <Clock className="w-8 h-8 text-blue-600" />,
-              title: 'Schedule Posts',
-              description: 'Plan and schedule your content in advance with precise timing control.'
+              icon: <Brain className="w-8 h-8 text-blue-600" />,
+              title: "Voice DNA builder",
+              description:
+                "Upload posts, transcripts, decks, and tone prompts to teach LinkLift exactly how you frame wins and insights.",
             },
             {
-              icon: <MessageSquare className="w-8 h-8 text-blue-600" />,
-              title: 'Smart Commenting',
-              description: 'Automate meaningful engagement with AI-powered comments and mentions.'
+              icon: <MessageSquareQuote className="w-8 h-8 text-blue-600" />,
+              title: "Story sequencer",
+              description:
+                "Drag stories into proven frameworks for narratives, carousels, and conversation hooks your market responds to.",
             },
             {
-              icon: <ThumbsUp className="w-8 h-8 text-blue-600" />,
-              title: 'Auto-Engagement',
-              description: 'Like and comment on posts in your feed to stay active and visible.'
+              icon: <CalendarClock className="w-8 h-8 text-blue-600" />,
+              title: "Revenue calendar",
+              description:
+                "Plan launches, repurpose assets, and auto-queue mentions so the right buyer sees you at the right moment.",
             },
             {
-              icon: <Repeat2 className="w-8 h-8 text-blue-600" />,
-              title: 'One-Click Reposts',
-              description: 'Share valuable content with your thoughts in just one command.'
+              icon: <Workflow className="w-8 h-8 text-blue-600" />,
+              title: "Engage stream automation",
+              description:
+                "Target accounts, hashtags, or recent viewers and let LinkLift run human-paced likes, comments, and nudges.",
             },
             {
-              icon: <Zap className="w-8 h-8 text-blue-600" />,
-              title: 'AI-Powered Content',
-              description: 'Generate engaging posts using AI or use your own custom templates.'
+              icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
+              title: "Signal tracking",
+              description:
+                "See which narratives spike reach, who engages, and when to follow up with warm prospects.",
             },
             {
-              icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
-              title: 'Safe & Reliable',
-              description: 'Built with safety in mind to comply with LinkedIn\'s terms of service.'
-            }
+              icon: <ShieldCheck className="w-8 h-8 text-blue-600" />,
+              title: "Workspace controls",
+              description:
+                "Role-based access, audit trails, and safe automation guardrails keep leadership and compliance aligned.",
+            },
           ].map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+            >
               <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
                 {feature.icon}
               </div>

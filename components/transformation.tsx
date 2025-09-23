@@ -9,7 +9,7 @@ const icons = [CheckCircle, TrendingUp, Users];
 
 export default function Transformation() {
   return (
-    <section id="features" className="py-20 bg-soft">
+    <section id="transformation" className="py-20 bg-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

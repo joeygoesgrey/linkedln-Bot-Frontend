@@ -2,21 +2,44 @@
 
 import { motion } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-const DOTS_COUNT = 30; // Increased number of dots for more coverage
-const COLORS = ['#0A66C2', '#0077B5', '#00A0DC', '#008CC9', '#0E76A8']; // Added more color variations
+const DOTS_COUNT = 30;
+const COLORS = ['#0A66C2', '#0077B5', '#00A0DC', '#008CC9', '#0E76A8'];
+
+// Deterministic dots for server-side rendering
+const getServerDots = () => 
+  Array.from({ length: DOTS_COUNT }).map((_, i) => ({
+    id: i,
+    size: 8, // Fixed size for server
+    delay: 0,
+    duration: 3,
+    x: (i * 5) % 180 - 40,
+    y: (i * 7) % 180 - 40,
+    color: COLORS[i % COLORS.length],
+  }));
+
+// Random dots for client-side rendering
+const getClientDots = () =>
+  Array.from({ length: DOTS_COUNT }).map((_, i) => ({
+    id: i,
+    size: Math.random() * 8 + 6,
+    delay: Math.random() * 2,
+    duration: 3 + Math.random() * 3,
+    x: Math.random() * 180 - 40,
+    y: Math.random() * 180 - 40,
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+  }));
 
 export default function AnimatedDots() {
-  // Generate random positions and delays for the dots
-  const dots = Array.from({ length: DOTS_COUNT }).map((_, i) => ({
-    id: i,
-    size: Math.random() * 8 + 6, // Slightly larger size between 6 and 14
-    delay: Math.random() * 2, // Random delay up to 2s
-    duration: 3 + Math.random() * 3, // Slower animation between 3s and 6s
-    x: Math.random() * 180 - 40, // Slightly less spread (-40% to 140%)
-    y: Math.random() * 180 - 40, // Slightly less spread (-40% to 140%)
-    color: COLORS[Math.floor(Math.random() * COLORS.length)], // Random color from our palette
-  }));
+  const [isMounted, setIsMounted] = useState(false);
+  
+  // Use server dots initially, then switch to client dots after mount
+  const dots = isMounted ? getClientDots() : getServerDots();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -31,12 +54,12 @@ export default function AnimatedDots() {
             top: `${dot.y}%`,
             color: dot.color,
           }}
-          animate={{
-            y: [0, -10, 0], // Slightly more vertical movement
-            opacity: [0.15, 0.5, 0.15], // Slightly more visible at peak
-            scale: [0.9, 1.1, 0.9], // More noticeable scaling
-            rotate: [0, 5, -5, 0] // Slightly more rotation
-          }}
+          animate={isMounted ? {
+            y: [0, -10, 0],
+            opacity: [0.15, 0.5, 0.15],
+            scale: [0.9, 1.1, 0.9],
+            rotate: [0, 5, -5, 0]
+          } : {}}
           transition={{
             duration: dot.duration,
             delay: dot.delay,

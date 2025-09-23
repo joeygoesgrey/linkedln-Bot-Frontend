@@ -62,10 +62,10 @@ export default function Proof() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
-            Proof in Numbers
+            LinkedIn growth outcomes our clients trust
           </h2>
           <p className="text-muted text-lg">
-            Not theory. Real results from real people.
+            Campaigns powered by LinkLift AI deliver compounding reach, inbound leads, and brand authority.
           </p>
         </motion.div>
 

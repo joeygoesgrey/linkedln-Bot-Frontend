@@ -51,11 +51,11 @@ export default function FinalCTA() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Every day you wait = missed clients
+              Launch your LinkedIn content engine today
             </h2>
-            
+
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Start posting like a thought leader today. Let's build your LinkedIn authority together.
+              Give us one onboarding call and LinkLift will generate posts, schedule campaigns, and engage prospects so you stay top of mind with dream clients.
             </p>
 
             <Button
