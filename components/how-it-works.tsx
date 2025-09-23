@@ -81,7 +81,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="workflow" className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-20 -top-20 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl"></div>
