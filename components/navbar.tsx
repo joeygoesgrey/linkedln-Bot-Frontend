@@ -52,13 +52,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <button 
+            <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="group flex items-center"
               aria-label="Home"
             >
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 text-white text-2xl font-bold group-hover:opacity-90 transition-opacity">
-                <span className="transform -rotate-90">⏎</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0B1A33] text-lg font-bold text-primary transition group-hover:bg-[#132544]">
+                L
               </div>
               <span className="ml-3 text-xl font-bold text-navy">LinkLift</span>
             </button>

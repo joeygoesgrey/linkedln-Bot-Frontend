@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Navbar from "@/components/navbar";
 
-const HIDDEN_PATH_PREFIXES = ["/dashboard"];
+const HIDDEN_PATH_PREFIXES = ["/dashboard", "/login", "/signup"];
 
 export default function NavbarContainer() {
   const pathname = usePathname();
