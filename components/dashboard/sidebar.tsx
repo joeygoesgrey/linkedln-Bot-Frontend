@@ -33,7 +33,7 @@ export default function Sidebar({ isOpen, activeTab, onTabChange }: SidebarProps
     >
       <Link href="/" className="hover:bg-accent/10 transition-colors duration-200">
         <div className="h-16 flex items-center px-4 border-b border-accent cursor-pointer">
-          <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-white font-bold">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0B1A33] text-sm font-bold text-primary">
             L
           </div>
           {isOpen && (
