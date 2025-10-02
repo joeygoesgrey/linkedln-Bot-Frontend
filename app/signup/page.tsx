@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
+import LinkedInButton from "@/components/auth/linkedin-button";
 
 type FormState = {
   fullName: string;
@@ -47,6 +48,15 @@ export default function SignupPage() {
         </p>
       }
     >
+      <div className="space-y-4">
+        <LinkedInButton onClick={() => {}} label="Continue with LinkedIn" />
+        <div className="flex items-center gap-3 text-xs uppercase tracking-wide text-white/40">
+          <span className="h-px flex-1 bg-white/10" />
+          <span>Or create account manually</span>
+          <span className="h-px flex-1 bg-white/10" />
+        </div>
+      </div>
+
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid gap-2">
           <Label htmlFor="fullName">Full name</Label>
