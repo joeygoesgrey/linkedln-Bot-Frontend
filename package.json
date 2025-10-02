@@ -1,13 +1,21 @@
 {
   "name": "nextjs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeygoesgrey/linkedln-bot-frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/joeygoesgrey/linkedln-bot-frontend/issues"
+  },
+  "homepage": "https://github.com/joeygoesgrey/linkedln-bot-frontend#readme",
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",
