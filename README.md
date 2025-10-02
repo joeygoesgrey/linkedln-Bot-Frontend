@@ -1,4 +1,4 @@
-# LinkLift Frontend
+# Linkedln Bot Frontend
 
 This repository contains the open-source frontend for [joeygoesgrey/linkedln-bot](https://github.com/joeygoesgrey/linkedln-bot), the automation toolkit that writes, schedules, and engages on LinkedIn for you. The companion backend executes the browser automation and LinkedIn workflows, while this Next.js app provides a polished interface for creators, consultants, and teams to manage their content engine.
 
